@@ -9,7 +9,7 @@ function Hero() {
       <div className="hero-background" style={{ backgroundColor: colors.neutral900 }}>
         <div className="hero-overlay"></div>
         {/* Using a working unsplash image instead of broken local file */}
-        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Medical Background" className="hero-img" />
+        <img src="/hero_medical_bg.png" alt="Medical Background" className="hero-img" />
       </div>
       
       <div className="container hero-container">
