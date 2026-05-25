@@ -1,0 +1,118 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.blog-card {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+.blog-category {
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.blog-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blog-card h3 {
+  font-size: 1.25rem;
+}
+
+.blog-card p {
+  flex-grow: 1;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  margin-top: var(--spacing-md);
+}
+
+/* Article List */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.article-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .article-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.article-meta {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.article-item h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.article-item p {
+  margin-bottom: 0;
+}
+
+/* FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.faq-question {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-answer {
+  margin-bottom: 0;
+}
