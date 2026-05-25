@@ -62,6 +62,12 @@
   gap: var(--spacing-xl);
 }
 
+@media (min-width: 1024px) {
+  .board-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 .board-card {
   text-align: center;
   padding: var(--spacing-xl);
