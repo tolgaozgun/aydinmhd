@@ -1,6 +1,7 @@
 import { Mail, MapPin } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 import colors from '../color';
 import './Footer.css';
 
@@ -9,7 +10,9 @@ function Footer() {
     <footer className="footer" style={{ backgroundColor: colors.primaryDarker, color: colors.white }}>
       <div className="container footer-container">
         <div className="footer-col brand-col">
-          <h2 className="footer-logo" style={{ color: colors.white }}>Aydın <span style={{ color: colors.white }}>MHD</span></h2>
+          <Link to="/" aria-label="Aydın MHD Anasayfa" style={{ display: 'inline-block', marginBottom: '1rem' }}>
+            <Logo color={colors.white} width="240" />
+          </Link>
           <p className="footer-desc">
             Meme hastalıklarının tanı ve tedavisindeki tüm gelişmeleri takip ediyoruz. Aydın Meme Hastalıkları Derneği olarak, erken teşhis ve doğru tedavi yöntemleri konusunda halkımızı ve sağlık profesyonellerini bilgilendirmeyi amaçlıyoruz.
           </p>

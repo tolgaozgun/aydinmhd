@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Logo from './Logo';
 import colors from '../color';
 import './Navbar.css';
 
@@ -28,8 +29,8 @@ function Navbar() {
       borderBottomColor: scrolled ? colors.transparent : colors.neutral300
     }}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo" style={{ color: colors.primaryDark }}>
-          <span className="logo-text">Aydın <span style={{ color: colors.primary }}>MHD</span></span>
+        <Link to="/" className="navbar-logo" aria-label="Aydın MHD Anasayfa">
+          <Logo color={colors.primaryDark} width="220" />
         </Link>
 
         {/* Desktop Menu */}
