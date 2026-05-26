@@ -30,7 +30,7 @@ function Navbar() {
     }}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" aria-label="Aydın MHD Anasayfa">
-          <Logo color={colors.primaryDark} width="220" />
+          <Logo variant="pink" width="220" />
         </Link>
 
         {/* Desktop Menu */}

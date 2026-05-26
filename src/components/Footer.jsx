@@ -11,7 +11,7 @@ function Footer() {
       <div className="container footer-container">
         <div className="footer-col brand-col">
           <Link to="/" aria-label="Aydın MHD Anasayfa" style={{ display: 'inline-block', marginBottom: '1rem' }}>
-            <Logo color={colors.white} width="240" />
+            <Logo width="240" />
           </Link>
           <p className="footer-desc">
             Meme hastalıklarının tanı ve tedavisindeki tüm gelişmeleri takip ediyoruz. Aydın Meme Hastalıkları Derneği olarak, erken teşhis ve doğru tedavi yöntemleri konusunda halkımızı ve sağlık profesyonellerini bilgilendirmeyi amaçlıyoruz.
