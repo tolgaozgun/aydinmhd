@@ -41,7 +41,6 @@ function Navbar() {
             <button 
               className={`nav-link dropdown-toggle ${location.pathname.startsWith('/hakkimizda') ? 'active' : ''}`} 
               style={{ color: location.pathname.startsWith('/hakkimizda') ? colors.primary : colors.neutral700 }}
-              aria-expanded={isDropdownOpen === 'about'}
               aria-label="Hakkımızda Menüsünü Aç"
             >
               Hakkımızda <ChevronDown size={16} />
@@ -59,7 +58,6 @@ function Navbar() {
             <button 
               className={`nav-link dropdown-toggle ${location.pathname.startsWith('/blog') ? 'active' : ''}`} 
               style={{ color: location.pathname.startsWith('/blog') ? colors.primary : colors.neutral700 }}
-              aria-expanded={isDropdownOpen === 'blog'}
               aria-label="Blog Menüsünü Aç"
             >
               Blog <ChevronDown size={16} />
