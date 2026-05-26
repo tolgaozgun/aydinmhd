@@ -81,7 +81,7 @@ function BlogPost() {
         <div className="post-container glass-panel" style={{ backgroundColor: colors.neutral100 }}>
           {post.image && (
             <div className="post-image-wrapper">
-              <img src={post.image} alt={post.title} className="post-featured-image" />
+              <img src={post.image} alt={post.title} width="800" height="400" className="post-featured-image" />
             </div>
           )}
           

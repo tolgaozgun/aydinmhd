@@ -43,7 +43,7 @@ function CookieConsent() {
   return (
     <div className="cookie-consent-overlay">
       <div className="cookie-consent-modal" style={{ backgroundColor: colors.white }}>
-        <div className="cookie-consent-icon" style={{ backgroundColor: colors.primaryLight, color: colors.white }}>
+        <div className="cookie-consent-icon" style={{ backgroundColor: colors.primary, color: colors.white }}>
           <Info size={24} />
         </div>
         <div className="cookie-consent-content">

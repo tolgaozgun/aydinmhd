@@ -8,8 +8,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-background" style={{ backgroundColor: colors.neutral900 }}>
         <div className="hero-overlay"></div>
-        {/* Using a working unsplash image instead of broken local file */}
-        <img src="/hero_medical_bg.png" alt="Medical Background" className="hero-img" />
+        <img src="/hero_medical_bg.webp" alt="Medical Background" width="1920" height="1080" className="hero-img" />
       </div>
       
       <div className="container hero-container">

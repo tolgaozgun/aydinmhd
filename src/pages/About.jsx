@@ -38,7 +38,7 @@ function About() {
             </p>
           </div>
           <div className="about-image-area">
-             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600&h=400" alt="Dernek Binası" className="rounded-img shadow-lg" />
+             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600&h=400" alt="Dernek Binası" width="600" height="400" className="rounded-img shadow-lg" />
           </div>
         </div>
 

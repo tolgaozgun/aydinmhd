@@ -36,7 +36,7 @@ function NewsCarousel() {
                 <div key={item.id} className="carousel-slide">
                   <div className="news-card" style={{ backgroundColor: colors.neutral100 }}>
                     <div className="news-card-img-wrapper">
-                      <img src={item.image} alt={item.title} className="news-card-img" />
+                      <img src={item.image} alt={item.title} width="400" height="250" className="news-card-img" />
                       <div className="news-date-badge" style={{ backgroundColor: colors.primary, color: colors.white }}>
                         <Calendar size={14} />
                         <span>{item.date}</span>

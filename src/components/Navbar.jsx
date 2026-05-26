@@ -38,7 +38,12 @@ function Navbar() {
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Anasayfa</Link>
           
           <div className="nav-dropdown">
-            <button className={`nav-link dropdown-toggle ${location.pathname.startsWith('/hakkimizda') ? 'active' : ''}`} style={{ color: location.pathname.startsWith('/hakkimizda') ? colors.primary : colors.neutral700 }}>
+            <button 
+              className={`nav-link dropdown-toggle ${location.pathname.startsWith('/hakkimizda') ? 'active' : ''}`} 
+              style={{ color: location.pathname.startsWith('/hakkimizda') ? colors.primary : colors.neutral700 }}
+              aria-expanded={isDropdownOpen === 'about'}
+              aria-label="Hakkımızda Menüsünü Aç"
+            >
               Hakkımızda <ChevronDown size={16} />
             </button>
             <div className="dropdown-menu" style={{ backgroundColor: colors.neutral100, borderColor: colors.neutral300 }}>
@@ -51,7 +56,12 @@ function Navbar() {
           <a href="https://tmhdf.org.tr/" className="nav-link" target="_blank" rel="noopener noreferrer" style={{ color: colors.neutral700 }}>Türkiye MHD Federasyonu</a>
 
           <div className="nav-dropdown">
-            <button className={`nav-link dropdown-toggle ${location.pathname.startsWith('/blog') ? 'active' : ''}`} style={{ color: location.pathname.startsWith('/blog') ? colors.primary : colors.neutral700 }}>
+            <button 
+              className={`nav-link dropdown-toggle ${location.pathname.startsWith('/blog') ? 'active' : ''}`} 
+              style={{ color: location.pathname.startsWith('/blog') ? colors.primary : colors.neutral700 }}
+              aria-expanded={isDropdownOpen === 'blog'}
+              aria-label="Blog Menüsünü Aç"
+            >
               Blog <ChevronDown size={16} />
             </button>
             <div className="dropdown-menu" style={{ backgroundColor: colors.neutral100, borderColor: colors.neutral300 }}>
@@ -65,7 +75,13 @@ function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: colors.primary }}>
+        <button 
+          className="mobile-toggle" 
+          onClick={() => setIsOpen(!isOpen)} 
+          style={{ color: colors.primary }}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

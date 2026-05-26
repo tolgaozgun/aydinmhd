@@ -27,14 +27,16 @@ function AboutPreview() {
         <div className="about-media">
           <div className="video-trigger-wrapper">
             <img 
-              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800&h=600" 
-              alt="Medical Team Working" 
-              className="about-image"
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=600" 
+              alt="Medical Team" 
+              width="600"
+              height="600"
+              className="about-img main-img"
             />
             <button 
               className="video-play-btn"
               onClick={() => setModalOpen(true)}
-              aria-label="Tanıtım Videosunu İzle"
+              aria-label="Videoyu Oynat"
               style={{ backgroundColor: colors.primary, color: colors.white }}
             >
               <Play size={32} fill="currentColor" />
@@ -47,7 +49,7 @@ function AboutPreview() {
       {modalOpen && (
         <div className="video-modal-overlay" onClick={() => setModalOpen(false)}>
           <div className="video-modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={() => setModalOpen(false)} style={{ color: colors.white }}>
+            <button className="modal-close-btn" onClick={() => setModalOpen(false)} style={{ color: colors.white }} aria-label="Kapat">
               <X size={24} />
             </button>
             <div className="video-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: colors.neutral900, color: colors.white }}>

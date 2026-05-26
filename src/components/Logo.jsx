@@ -8,9 +8,16 @@ export default function Logo({ className = "", style = {}, width = "300", varian
   return (
     <img 
       src={imgSrc} 
-      alt="Aydın Meme Hastalıkları Derneği" 
-      className={className} 
-      style={{ ...style, width: width, height: 'auto', objectFit: 'contain' }} 
+      alt="Aydın Meme Hastalıkları Derneği Logosu" 
+      width="200"
+      height="60"
+      className={className}
+      style={{ 
+        ...style,
+        height: '40px',
+        width: 'auto',
+        objectFit: 'contain'
+      }}
     />
   );
 }
