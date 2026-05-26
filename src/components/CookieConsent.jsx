@@ -6,11 +6,30 @@ import './CookieConsent.css';
 
 function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
+  const gaId = 'G-17H3TYC0ZL';
+
+  const loadGoogleAnalytics = () => {
+    // Prevent loading multiple times
+    if (document.getElementById('ga-script')) return;
+
+    const script = document.createElement('script');
+    script.id = 'ga-script';
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaId);
+  };
 
   useEffect(() => {
     // Check if user has already accepted
     const hasAccepted = localStorage.getItem('kvkk_cookie_consent');
-    if (!hasAccepted) {
+    if (hasAccepted === 'true') {
+      loadGoogleAnalytics();
+    } else {
       // Small delay for better UX
       const timer = setTimeout(() => {
         setIsVisible(true);
@@ -21,6 +40,7 @@ function CookieConsent() {
 
   const handleAccept = () => {
     localStorage.setItem('kvkk_cookie_consent', 'true');
+    loadGoogleAnalytics();
     setIsVisible(false);
   };
 
