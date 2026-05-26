@@ -1,4 +1,5 @@
 import { Users, History, Target } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import colors from '../color';
 import './About.css';
 
@@ -13,6 +14,11 @@ function About() {
 
   return (
     <div className="page-wrapper" style={{ backgroundColor: colors.neutral200 }}>
+      <Helmet>
+        <title>Hakkımızda | Aydın MHD</title>
+        <meta name="description" content="Aydın Meme Hastalıkları Derneği yönetim kurulu, tarihçemiz ve biz kimiz." />
+      </Helmet>
+      
       <div className="page-header" style={{ backgroundColor: colors.primary, color: colors.neutral100 }}>
         <div className="container">
           <h1 className="page-title" style={{ color: colors.neutral100 }}>Hakkımızda</h1>

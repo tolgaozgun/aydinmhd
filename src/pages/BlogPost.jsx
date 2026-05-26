@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, User, MapPin, Clock } from 'lucide-react';
 import { postData } from '../data/postData';
 import colors from '../color';
@@ -18,8 +19,30 @@ function BlogPost() {
     );
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "image": post.image || "https://aydinmhd.org/favicon.png",
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author || "Aydın MHD"
+    }
+  };
+
   return (
     <div className="page-wrapper" style={{ backgroundColor: colors.neutral200 }}>
+      <Helmet>
+        <title>{post.title} | Aydın MHD</title>
+        <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.image || "https://aydinmhd.org/favicon.png"} />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
       {/* Hero Header */}
       <div className="post-header" style={{ backgroundColor: colors.primary, color: colors.white, backgroundImage: `linear-gradient(to right, ${colors.primaryDark}, ${colors.primary})` }}>
         <div className="container">

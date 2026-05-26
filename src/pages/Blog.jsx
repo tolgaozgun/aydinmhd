@@ -1,4 +1,5 @@
 import { Calendar, ArrowRight, BookOpen, HelpCircle, Newspaper } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { postData, faqs } from '../data/postData';
 import colors from '../color';
@@ -8,8 +9,37 @@ function Blog({ section = 'haberler' }) {
   const newsItems = postData.filter(post => post.type === 'news' || post.type === 'announcement');
   const articles = postData.filter(post => post.type === 'article');
 
+  // Meta information
+  const pageTitle = 
+    section === 'haberler' ? "Haberler | Aydın MHD" :
+    section === 'makaleler' ? "Makaleler | Aydın MHD" :
+    "Sıkça Sorulan Sorular | Aydın MHD";
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="page-wrapper" style={{ backgroundColor: colors.neutral200 }}>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={`Aydın Meme Hastalıkları Derneği - ${section === 'sss' ? 'Sıkça Sorulan Sorular' : section === 'haberler' ? 'Haberler ve Duyurular' : 'Bilimsel Makaleler'}`} />
+        {section === 'sss' && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
+      </Helmet>
+      
       <div className="page-header" style={{ backgroundColor: colors.primary, color: colors.neutral100 }}>
         <div className="container">
           <h1 className="page-title" style={{ color: colors.neutral100 }}>Blog & Haberler</h1>

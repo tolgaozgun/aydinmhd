@@ -1,10 +1,15 @@
 import { MapPin, Mail, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import colors from '../color';
 import './Contact.css';
 
 function Contact() {
   return (
     <div className="page-wrapper" style={{ backgroundColor: colors.neutral200 }}>
+      <Helmet>
+        <title>İletişim | Aydın MHD</title>
+        <meta name="description" content="Derneğimizle iletişime geçin. Adnan Menderes Üniversitesi Tıp Fakültesi yerleşkesi adresimiz ve iletişim bilgilerimiz." />
+      </Helmet>
       <div className="page-header" style={{ backgroundColor: colors.primary, color: colors.neutral100 }}>
         <div className="container">
           <h1 className="page-title" style={{ color: colors.neutral100 }}>Bize Ulaşın</h1>
