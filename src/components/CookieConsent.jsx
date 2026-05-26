@@ -36,7 +36,7 @@ function CookieConsent() {
           <h4 style={{ color: colors.primaryDark }}>Çerez Politikası ve KVKK Aydınlatma Metni</h4>
           <p style={{ color: colors.neutral700 }}>
             Web sitemizde, size en iyi deneyimi sunabilmek ve site trafiğini analiz etmek için çerezler (cookies) kullanılmaktadır. 
-            Sitemizi kullanmaya devam ederek, çerez kullanımını ve <Link to="/hakkimizda" style={{ color: colors.primary, textDecoration: 'underline' }}>KVKK Politikamızı</Link> kabul etmiş olursunuz.
+            Sitemizi kullanmaya devam ederek, çerez kullanımını ve <Link to="/kvkk" style={{ color: colors.primary, textDecoration: 'underline' }}>KVKK Politikamızı</Link> kabul etmiş olursunuz.
           </p>
           <div className="cookie-consent-actions">
             <button 

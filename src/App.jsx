@@ -9,6 +9,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import Kvkk from './pages/Kvkk';
 import NotFound from './pages/NotFound';
 import colors from './color';
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="/blog/sss" element={<Blog section="sss" />} />
             <Route path="/post/:id" element={<BlogPost />} />
             <Route path="/iletisim" element={<Contact />} />
+            <Route path="/kvkk" element={<Kvkk />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
