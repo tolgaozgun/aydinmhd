@@ -8,7 +8,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-background" style={{ backgroundColor: colors.neutral900 }}>
         <div className="hero-overlay"></div>
-        <img src="/hero_medical_bg.webp" alt="Medical Background" width="1920" height="1080" className="hero-img" />
+        <img src="/hero_medical_bg.webp" alt="Medical Background" width="1920" height="1080" className="hero-img" fetchPriority="high" />
       </div>
       
       <div className="container hero-container">
